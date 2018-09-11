@@ -1,64 +1,40 @@
 #include "Fighter.h"
 
-
-
-Fighter::Fighter()
-{
-}
-
-
 Fighter::~Fighter()
 {
 }
 
-std::string Fighter::getName() const
+string Fighter::getName() const
 {
-	return std::string();
+	return name;
 }
 
 int Fighter::getMaximumHP() const
 {
-	return 0;
+	return maximumHP;
 }
 
 int Fighter::getCurrentHP() const
 {
-	return 0;
+	return currentHP;
 }
 
 int Fighter::getStrength() const
 {
-	return 0;
+	return strength;
 }
 
 int Fighter::getSpeed() const
 {
-	return 0;
+	return speed;
 }
 
 int Fighter::getMagic() const
 {
-	return 0;
-}
-
-int Fighter::getDamage()
-{
-	return 0;
+	return magic;
 }
 
 void Fighter::takeDamage(int damage)
 {
-}
-
-void Fighter::reset()
-{
-}
-
-void Fighter::regenerate()
-{
-}
-
-bool Fighter::useAbility()
-{
-	return false;
+	currentHP -= damage - (speed / 4);
 }

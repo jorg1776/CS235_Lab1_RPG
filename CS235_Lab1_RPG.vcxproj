@@ -151,11 +151,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Fighter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Arena.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArenaInterface.h" />
+    <ClInclude Include="Fighter.h" />
     <ClInclude Include="FighterInterface.h" />
     <ClInclude Include="Arena.h" />
   </ItemGroup>

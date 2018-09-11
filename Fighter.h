@@ -1,22 +1,38 @@
-#pragma once
+#ifndef FIGHTER_HPP_
+#define FIGHTER_HPP_
+
 #include "FighterInterface.h"
+
+#include <string>
+using namespace std;
+
 class Fighter : FighterInterface
 {
+private:
+	string name;
+	int maximumHP;
+	int currentHP;
+	int strength;
+	int speed;
+	int magic;
+	int damage;
 public:
-	Fighter();
+	Fighter(string name, int maximumHP, int strength, int speed, int magic) 
+		: name(name), maximumHP(maximumHP), strength(strength), speed(speed), magic(magic) {}
 	~Fighter();
 
 	// Inherited via FighterInterface
-	virtual std::string getName() const override;
-	virtual int getMaximumHP() const override;
-	virtual int getCurrentHP() const override;
-	virtual int getStrength() const override;
-	virtual int getSpeed() const override;
-	virtual int getMagic() const override;
-	virtual int getDamage() override;
-	virtual void takeDamage(int damage) override;
-	virtual void reset() override;
-	virtual void regenerate() override;
-	virtual bool useAbility() override;
+	string getName() const override;
+	int getMaximumHP() const override;
+	int getCurrentHP() const override;
+	int getStrength() const override;
+	int getSpeed() const override;
+	int getMagic() const override;
+	virtual int getDamage() = 0;
+	void takeDamage(int damage) override;
+	virtual void reset() = 0;
+	virtual void regenerate() = 0;
+	virtual bool useAbility() = 0;
 };
 
+#endif /* FIGHTER_HPP_*/
