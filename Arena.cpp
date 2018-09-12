@@ -62,7 +62,7 @@ bool Arena::removeFighter(std::string name)
 //if fighter not in index, returns -1
 int Arena::getFighterIndex(string name)
 {
-	if (fighters.size > 0) //if there are fighters in the vector
+	if (fighters.size() > 0) //if there are fighters in the vector
 	{
 		for (int i = 0; i < fighters.size(); i++)
 		{
