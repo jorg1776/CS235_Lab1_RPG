@@ -34,31 +34,24 @@ bool Arena::addFighter(std::string info)
 			{
 				Robot* newRobot = new Robot(name, maximumHP, strength, speed, magic);
 				fighters.push_back(newRobot);
+				return true;
 			}
 			else if (type == "A")
 			{
 				Archer* newArcher = new Archer(name, maximumHP, strength, speed, magic);
 				fighters.push_back(newArcher);
+				return true;
 			}
 			else if (type == "C")
 			{
 				Cleric* newCleric = new Cleric(name, maximumHP, strength, speed, magic);
 				fighters.push_back(newCleric);
-			}
-			else
-			{
-				return false;
+				return true;
 			}
 		}
-		else
-		{
-			return false;
-		}
 	}
-	else
-	{
-		return false;
-	}
+	
+	return false;
 }
 
 bool Arena::removeFighter(std::string name)
