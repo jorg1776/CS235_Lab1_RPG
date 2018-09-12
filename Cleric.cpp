@@ -6,7 +6,7 @@ Cleric::~Cleric()
 
 int Cleric::getDamage()
 {
-	return 0;
+	return magic;
 }
 
 void Cleric::reset()

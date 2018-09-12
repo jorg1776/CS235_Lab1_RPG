@@ -6,7 +6,7 @@ Archer::~Archer()
 
 int Archer::getDamage()
 {
-	return 0;
+	return speed;
 }
 
 void Archer::reset()

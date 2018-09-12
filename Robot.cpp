@@ -6,7 +6,7 @@ Robot::~Robot()
 
 int Robot::getDamage()
 {
-	return 0;
+	return strength;
 }
 
 void Robot::reset()

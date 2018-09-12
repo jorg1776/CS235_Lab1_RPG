@@ -8,7 +8,7 @@ using namespace std;
 
 class Fighter : public FighterInterface
 {
-private:
+protected:
 	string name;
 	int maximumHP;
 	int currentHP;
