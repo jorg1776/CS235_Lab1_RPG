@@ -49,7 +49,7 @@ bool Arena::addFighter(std::string info)
 
 	if (ss >> name >> type >> maximumHP >> strength >> speed >> magic) 
 	{
-		if (getFighterIndex(name) == -1)
+		if (getFighterIndex(name) == -1) //if not in list
 		{
 			if (type == "R")
 			{
@@ -86,7 +86,7 @@ bool Arena::removeFighter(std::string name)
 	return false;
 }
 
-FighterInterface * Arena::getFighter(std::string name)
+FighterInterface* Arena::getFighter(std::string name)
 {
 	int fighterIndex = getFighterIndex(name);
 	if (fighterIndex >= 0)
