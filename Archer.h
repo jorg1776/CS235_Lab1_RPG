@@ -3,7 +3,7 @@
 
 #include "Fighter.h"
 
-class Archer : Fighter
+class Archer : public Fighter
 {
 public:
 	Archer(string name, int maximumHP, int strength, int speed, int magic) :

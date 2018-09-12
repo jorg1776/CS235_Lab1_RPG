@@ -3,7 +3,7 @@
 
 #include "Fighter.h"
 
-class Robot : Fighter
+class Robot : public Fighter
 {
 public:
 	Robot(string name, int maximumHP, int strength, int speed, int magic) :

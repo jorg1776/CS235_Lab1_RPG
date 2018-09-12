@@ -6,7 +6,7 @@
 #include <string>
 using namespace std;
 
-class Fighter : FighterInterface
+class Fighter : public FighterInterface
 {
 private:
 	string name;

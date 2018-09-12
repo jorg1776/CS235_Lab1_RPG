@@ -32,15 +32,18 @@ bool Arena::addFighter(std::string info)
 		{
 			if (type == "R")
 			{
-				Robot newRobot(name, maximumHP, strength, speed, magic);
+				Robot* newRobot = new Robot(name, maximumHP, strength, speed, magic);
+				fighters.push_back(newRobot);
 			}
 			else if (type == "A")
 			{
-				Archer newArcher(name, maximumHP, strength, speed, magic);
+				Archer* newArcher = new Archer(name, maximumHP, strength, speed, magic);
+				fighters.push_back(newArcher);
 			}
 			else if (type == "C")
 			{
-				Cleric newCleric(name, maximumHP, strength, speed, magic);
+				Cleric* newCleric = new Cleric(name, maximumHP, strength, speed, magic);
+				fighters.push_back(newCleric);
 			}
 			else
 			{

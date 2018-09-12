@@ -11,7 +11,7 @@ class Arena : ArenaInterface
 {
 private:
 	int size;
-	vector<FighterInterface *> fighters;
+	vector<FighterInterface*> fighters;
 
 	int getFighterIndex(string name);
 public:
