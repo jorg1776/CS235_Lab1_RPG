@@ -36,7 +36,13 @@ int Fighter::getMagic() const
 
 void Fighter::takeDamage(int damage)
 {
-	currentHP -= damage - (speed / 4);
+	int finalDamage = damage - (speed / 4);
+	if (finalDamage <= 0)
+	{
+		finalDamage = 1; //so hp reduces by at least 1
+	}
+
+	currentHP -= finalDamage;
 }
 
 void Fighter::regenerate()
