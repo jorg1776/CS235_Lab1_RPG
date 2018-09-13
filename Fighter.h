@@ -18,7 +18,10 @@ protected:
 	int damage;
 public:
 	Fighter(string name, int maximumHP, int strength, int speed, int magic) 
-		: name(name), maximumHP(maximumHP), strength(strength), speed(speed), magic(magic) {}
+		: name(name), maximumHP(maximumHP), strength(strength), speed(speed), magic(magic) 
+	{
+		currentHP = maximumHP;
+	}
 	~Fighter();
 
 	// Inherited via FighterInterface
