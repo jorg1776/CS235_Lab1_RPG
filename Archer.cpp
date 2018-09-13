@@ -16,5 +16,6 @@ void Archer::reset()
 
 bool Archer::useAbility()
 {
-	return false;
+	speed++;
+	return true;
 }

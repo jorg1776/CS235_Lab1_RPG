@@ -34,5 +34,25 @@ void Cleric::regenerate()
 
 bool Cleric::useAbility()
 {
-	return false;
+	if (mana >= CLERIC_ABILITY_COST)
+	{
+		int hpIncrease = magic / 3;
+		if (hpIncrease == 0)
+		{
+			hpIncrease = 1; // allows increase by at least 1
+		}
+
+		currentHP += magic / 3;
+		if (currentHP > maximumHP)
+		{
+			currentHP = maximumHP; // keeps current hp from exceeding max
+		}
+
+		mana -= CLERIC_ABILITY_COST;
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

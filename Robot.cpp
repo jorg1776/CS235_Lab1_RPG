@@ -7,7 +7,7 @@ Robot::~Robot()
 int Robot::getDamage()
 {
 	int totalDamage = strength;
-	if (bonusDamage > 0) //runs if useAbility had been called
+	if (bonusDamage > 0) //runs if Ability had been used
 	{
 		totalDamage += bonusDamage;
 		bonusDamage = 0;
