@@ -46,30 +46,27 @@ bool Arena::addFighter(std::string info)
 	int speed;
 	int magic;
 
-	if (ss.str().size() == 5) //checks number of inputs
+	if (ss >> name >> type >> maximumHP >> strength >> speed >> magic)
 	{
-		if (ss >> name >> type >> maximumHP >> strength >> speed >> magic)
+		if (getFighterIndex(name) == -1) //if not in list
 		{
-			if (getFighterIndex(name) == -1) //if not in list
+			if (type == "R")
 			{
-				if (type == "R")
-				{
-					Robot* newRobot = new Robot(name, maximumHP, strength, speed, magic);
-					fighters.push_back(newRobot);
-					return true;
-				}
-				else if (type == "A")
-				{
-					Archer* newArcher = new Archer(name, maximumHP, strength, speed, magic);
-					fighters.push_back(newArcher);
-					return true;
-				}
-				else if (type == "C")
-				{
-					Cleric* newCleric = new Cleric(name, maximumHP, strength, speed, magic);
-					fighters.push_back(newCleric);
-					return true;
-				}
+				Robot* newRobot = new Robot(name, maximumHP, strength, speed, magic);
+				fighters.push_back(newRobot);
+				return true;
+			}
+			else if (type == "A")
+			{
+				Archer* newArcher = new Archer(name, maximumHP, strength, speed, magic);
+				fighters.push_back(newArcher);
+				return true;
+			}
+			else if (type == "C")
+			{
+				Cleric* newCleric = new Cleric(name, maximumHP, strength, speed, magic);
+				fighters.push_back(newCleric);
+				return true;
 			}
 		}
 	}
