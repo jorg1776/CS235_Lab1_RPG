@@ -13,7 +13,6 @@ public:
 	// Inherited via Fighter
 	virtual int getDamage() override;
 	virtual void reset() override;
-	virtual void regenerate() override;
 	virtual bool useAbility() override;
 };
 

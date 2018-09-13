@@ -31,7 +31,7 @@ public:
 	virtual int getDamage() = 0;
 	void takeDamage(int damage) override;
 	virtual void reset() = 0;
-	virtual void regenerate() = 0;
+	virtual void regenerate() override;
 	virtual bool useAbility() = 0;
 };
 

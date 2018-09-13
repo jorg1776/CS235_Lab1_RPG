@@ -5,9 +5,16 @@
 
 class Cleric : public Fighter
 {
+private:
+	const int MAX_MANA;
+	int mana;
 public:
 	Cleric(string name, int maximumHP, int strength, int speed, int magic) :
-		Fighter(name, maximumHP, strength, speed, magic) {}
+		Fighter(name, maximumHP, strength, speed, magic) 
+	{
+		MAX_MANA = magic * 5;
+		mana = MAX_MANA;
+	}
 	~Cleric();
 
 	// Inherited via Fighter

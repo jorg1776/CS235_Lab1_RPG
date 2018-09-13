@@ -38,3 +38,14 @@ void Fighter::takeDamage(int damage)
 {
 	currentHP -= damage - (speed / 4);
 }
+
+void Fighter::regenerate()
+{
+	int increase = strength / 6;
+
+	
+	if ((currentHP + increase) <= maximumHP)
+	{
+		currentHP += increase;
+	}
+}
