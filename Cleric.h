@@ -6,7 +6,7 @@
 class Cleric : public Fighter
 {
 private:
-	const int MAX_MANA;
+	int MAX_MANA;
 	int mana;
 public:
 	Cleric(string name, int maximumHP, int strength, int speed, int magic) :
