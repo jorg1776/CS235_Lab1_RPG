@@ -16,10 +16,16 @@ void Cleric::reset()
 void Cleric::regenerate()
 {
 	int manaIncrease = magic / 5;
-
-	if ((mana + manaIncrease) <= MAX_MANA)
+	if (manaIncrease == 0)
 	{
-		mana += manaIncrease;
+		manaIncrease = 1; //so mana increases by at least 1
+	}
+
+	mana += manaIncrease;
+
+	if (mana > MAX_MANA)
+	{
+		mana = MAX_MANA;
 	}
 
 	Fighter::regenerate();

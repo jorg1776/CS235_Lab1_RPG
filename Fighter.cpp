@@ -42,10 +42,16 @@ void Fighter::takeDamage(int damage)
 void Fighter::regenerate()
 {
 	int increase = strength / 6;
+	if (increase == 0)
+	{
+		increase = 1; //so that hp increases by at least one
+	}
+
+	currentHP += increase;
 
 	
-	if ((currentHP + increase) <= maximumHP)
+	if (currentHP > maximumHP)
 	{
-		currentHP += increase;
+		currentHP = maximumHP;
 	}
 }
