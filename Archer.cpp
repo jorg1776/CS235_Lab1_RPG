@@ -13,10 +13,6 @@ void Archer::reset()
 {
 }
 
-void Archer::regenerate()
-{
-}
-
 bool Archer::useAbility()
 {
 	return false;
