@@ -6,7 +6,7 @@
 class Robot : public Fighter
 {
 private:
-	const int MAX_ENERGY;
+	int maxEnergy;
 	int energy;
 	int bonusDamage = 0;
 
@@ -14,8 +14,8 @@ public:
 	Robot(string name, int maximumHP, int strength, int speed, int magic) :
 		Fighter(name, maximumHP, strength, speed, magic) 
 	{
-		MAX_ENERGY = magic * 2;
-		energy = MAX_ENERGY;
+		maxEnergy = magic * 2;
+		energy = maxEnergy;
 	}
 	~Robot();
 
