@@ -30,7 +30,7 @@ public:
 	int getMagic() const override;
 	virtual int getDamage() = 0;
 	void takeDamage(int damage) override;
-	virtual void reset() = 0;
+	virtual void reset() override;
 	virtual void regenerate() override;
 	virtual bool useAbility() = 0;
 };

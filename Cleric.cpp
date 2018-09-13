@@ -12,6 +12,8 @@ int Cleric::getDamage()
 void Cleric::reset()
 {
 	mana = MAX_MANA;
+
+	Fighter::reset();
 }
 
 void Cleric::regenerate()

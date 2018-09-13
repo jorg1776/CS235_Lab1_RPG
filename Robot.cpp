@@ -19,6 +19,8 @@ void Robot::reset()
 {
 	energy = maxEnergy;
 	bonusDamage = 0;
+
+	Fighter::reset();
 }
 
 bool Robot::useAbility()

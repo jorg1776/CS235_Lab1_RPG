@@ -45,6 +45,11 @@ void Fighter::takeDamage(int damage)
 	currentHP -= finalDamage;
 }
 
+void Fighter::reset()
+{
+	currentHP = maximumHP;
+}
+
 void Fighter::regenerate()
 {
 	int increase = strength / 6;
