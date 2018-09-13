@@ -6,14 +6,14 @@
 class Cleric : public Fighter
 {
 private:
-	int MAX_MANA;
+	int maxMana;
 	int mana;
 public:
 	Cleric(string name, int maximumHP, int strength, int speed, int magic) :
 		Fighter(name, maximumHP, strength, speed, magic) 
 	{
-		MAX_MANA = magic * 5;
-		mana = MAX_MANA;
+		maxMana = magic * 5;
+		mana = maxMana;
 	}
 	~Cleric();
 
