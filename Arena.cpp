@@ -35,6 +35,17 @@ int Arena::getFighterIndex(string name)
 	}
 }
 
+int getInputWordCount(string input)
+{
+	stringstream ss(input);
+	string word;
+	int count = 0;
+
+	while (ss >> word) { count++; }
+
+	return count;
+}
+
 bool Arena::addFighter(std::string info)
 {
 	stringstream ss(info);
@@ -46,27 +57,30 @@ bool Arena::addFighter(std::string info)
 	int speed;
 	int magic;
 
-	if (ss >> name >> type >> maximumHP >> strength >> speed >> magic)
+	if (getInputWordCount(info) == 6)
 	{
-		if (getFighterIndex(name) == -1) //if not in list
+		if (ss >> name >> type >> maximumHP >> strength >> speed >> magic)
 		{
-			if (type == "R")
+			if (getFighterIndex(name) == -1) //if not in list
 			{
-				Robot* newRobot = new Robot(name, maximumHP, strength, speed, magic);
-				fighters.push_back(newRobot);
-				return true;
-			}
-			else if (type == "A")
-			{
-				Archer* newArcher = new Archer(name, maximumHP, strength, speed, magic);
-				fighters.push_back(newArcher);
-				return true;
-			}
-			else if (type == "C")
-			{
-				Cleric* newCleric = new Cleric(name, maximumHP, strength, speed, magic);
-				fighters.push_back(newCleric);
-				return true;
+				if (type == "R")
+				{
+					Robot* newRobot = new Robot(name, maximumHP, strength, speed, magic);
+					fighters.push_back(newRobot);
+					return true;
+				}
+				else if (type == "A")
+				{
+					Archer* newArcher = new Archer(name, maximumHP, strength, speed, magic);
+					fighters.push_back(newArcher);
+					return true;
+				}
+				else if (type == "C")
+				{
+					Cleric* newCleric = new Cleric(name, maximumHP, strength, speed, magic);
+					fighters.push_back(newCleric);
+					return true;
+				}
 			}
 		}
 	}
