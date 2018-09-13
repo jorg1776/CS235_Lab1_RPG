@@ -5,9 +5,17 @@
 
 class Robot : public Fighter
 {
+private:
+	const int MAX_ENERGY;
+	int energy;
+
 public:
 	Robot(string name, int maximumHP, int strength, int speed, int magic) :
-		Fighter(name, maximumHP, strength, speed, magic) {}
+		Fighter(name, maximumHP, strength, speed, magic) 
+	{
+		MAX_ENERGY = magic * 2;
+		energy = MAX_ENERGY;
+	}
 	~Robot();
 
 	// Inherited via Fighter
