@@ -11,6 +11,8 @@ int Robot::getDamage()
 
 void Robot::reset()
 {
+	energy = MAX_ENERGY;
+	bonusDamage = 0;
 }
 
 bool Robot::useAbility()

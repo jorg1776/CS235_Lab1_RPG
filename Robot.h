@@ -8,6 +8,7 @@ class Robot : public Fighter
 private:
 	const int MAX_ENERGY;
 	int energy;
+	int bonusDamage = 0;
 
 public:
 	Robot(string name, int maximumHP, int strength, int speed, int magic) :

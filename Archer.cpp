@@ -11,6 +11,7 @@ int Archer::getDamage()
 
 void Archer::reset()
 {
+	speed = initialSpeed;
 }
 
 bool Archer::useAbility()

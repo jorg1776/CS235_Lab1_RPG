@@ -5,9 +5,14 @@
 
 class Archer : public Fighter
 {
+private:
+	int initialSpeed;
 public:
 	Archer(string name, int maximumHP, int strength, int speed, int magic) :
-		Fighter(name, maximumHP, strength, speed, magic) {}
+		Fighter(name, maximumHP, strength, speed, magic) 
+	{
+		initialSpeed = speed;
+	}
 	~Archer();
 
 	// Inherited via Fighter
